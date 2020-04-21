@@ -8,6 +8,19 @@ var board = [
   ["","",""]
 ];
 var winner = "";
+var namePlayer1 = "";
+var namePlayer2 = "";
+
+function setName(id){
+  if(id == "player1"){
+    namePlayer1 = document.getElementById(id).value;
+    console.log("setnames1")
+  } 
+  if(id == "player2"){
+    namePlayer2 = document.getElementById(id).value;
+    console.log("setnames2")
+  }
+}
 
 function choosePlayers(value){
   player1 = value; 
@@ -81,8 +94,17 @@ function checkWinner(){
 }
  
 function printWinner(){
-  winner = turn;
+  if(turn == player1){
+    console.log(namePlayer1)
+    winner = namePlayer1;
+    console.log("entre a 1 " + winner + ", nameplayer1 "  + namePlayer1);
+  } else {
+    console.log(namePlayer2)
+    winner = namePlayer2;
+    console.log("entre a 2 " + winner + ", nameplayer2 "  + namePlayer2);
+  }
   document.getElementById("gameResult").innerHTML = winner + " ha ganado!";
+
 }
 
 function newGame(){
@@ -95,9 +117,10 @@ function newGame(){
     document.getElementById(j).innerHTML = "";
   }
   document.getElementById("gameResult").innerHTML = "";
-
+  playRounds = 0;
+  winner = "";
 }
-
+//juego no puede empezar si no hay nombres
 //no poder seguir poniendo x o o al finalizar 
 //PONER NOMBRES
 //BLOQUEAR CAMBIAR X O O

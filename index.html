@@ -8,11 +8,11 @@
 <h1 style = "text-align: center;">Ta -Te -Ti</h1>
   
 <label for="player1">Jugador 1: </label>
-<input type="text" id="player1" name="fname"><br><br>
+<input type="text" id="player1" onchange="setName(this.id)"><br><br>
 <label for="player2">Jugador 2: </label>
-<input type="text" id="player2" name="lname"><br><br>
+<input type="text" id="player2" onchange="setName(this.id)"><br><br>
 
-<label for="player">Jugador1 eliga X o O:</label>
+<label for="player">Jugador 1 eliga X o O:</label>
 
 <select id="player" onclick="choosePlayers(value)">
   <option value="x" selected>X</option>
