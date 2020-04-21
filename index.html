@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<h1 style = "text-align: center;">Ta -Te -Ti</h1>
+  
+<label for="player1">Jugador 1: </label>
+<input type="text" id="player1" name="fname"><br><br>
+<label for="player2">Jugador 2: </label>
+<input type="text" id="player2" name="lname"><br><br>
+
+<label for="player">Jugador1 eliga X o O:</label>
+
+<select id="player" onclick="choosePlayers(value)">
+  <option value="x" selected>X</option>
+  <option value="o">O</option>
+</select>
+  
+<div class="grid-container" >
+  <div class="grid-item" id="0" onclick="markXorO(this.id, 0, 0)"></div>
+  <div class="grid-item" id="1" onclick="markXorO(this.id, 0, 1)"></div>
+  <div class="grid-item" id="2" onclick="markXorO(this.id, 0, 2)"></div>  
+  <div class="grid-item" id="3" onclick="markXorO(this.id, 1, 0)"></div>
+  <div class="grid-item" id="4" onclick="markXorO(this.id, 1, 1)"></div>
+  <div class="grid-item" id="5" onclick="markXorO(this.id, 1, 2)"></div>  
+  <div class="grid-item" id="6" onclick="markXorO(this.id, 2, 0)"></div>
+  <div class="grid-item" id="7" onclick="markXorO(this.id, 2, 1)"></div>
+  <div class="grid-item" id="8" onclick="markXorO(this.id, 2, 2)"></div>  
+</div>
+<br><br>
+<div id="gameResult" class="gameResult"></div>
+<button onclick="newGame()">Nuevo juego</button>
+</body>
+</html>
