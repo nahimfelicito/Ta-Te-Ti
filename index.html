@@ -1,6 +1,6 @@
 <html>
 <head>
-    <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 	<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -18,7 +18,9 @@
   <option value="x" selected>X</option>
   <option value="o">O</option>
 </select>
-  
+
+<div id="whoPlay" class="whoPlay"></div>
+<br><br>
 <div class="grid-container" >
   <div class="grid-item" id="0" onclick="markXorO(this.id, 0, 0)"></div>
   <div class="grid-item" id="1" onclick="markXorO(this.id, 0, 1)"></div>
@@ -32,6 +34,6 @@
 </div>
 <br><br>
 <div id="gameResult" class="gameResult"></div>
-<button onclick="newGame()">Nuevo juego</button>
+<button onclick="newGame()" class="newGameButton">Nuevo juego</button>
 </body>
 </html>
